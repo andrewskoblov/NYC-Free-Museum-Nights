@@ -1,0 +1,805 @@
+/*** VSCodeEDU preview fix ***/
+html {
+    background-color: #f8f9fa;
+}
+
+/*** Body Styles ***/
+body {
+    background-color: #f8f9fa;
+    font-size: 16px;
+    color: #231942;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Space for fixed navbar */
+    padding-bottom: 80px; /* Space for fixed footer */
+}
+
+/*** Headings ***/
+h1 {
+    background-color: #42A5F5;
+    font-family: 'Georgia', serif;
+    font-size: 48px;
+    color: #1a1a1a;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #1976D2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #42A5F5;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #555;
+    font-style: italic;
+}
+
+/*** Paragraphs and Lists ***/
+p {
+    line-height: 1.8;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #444;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/*** Links (Pseudo-classes) ***/
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:link {
+    color: #1976D2;
+}
+
+a:visited {
+    color: #7B1FA2;
+}
+
+a:hover {
+    color: #42A5F5;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0D47A1;
+}
+
+/*** Buttons ***/
+button {
+    background-color: #42A5F5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1976D2;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*** Navigation Bar ***/
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1976D2;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li {
+    float: left;
+    margin: 0;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #42A5F5;
+    text-decoration: none;
+}
+
+/*** Header Container (Using Flexbox) ***/
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* First header item - contains image */
+.header-item:nth-of-type(1) {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Second header item - contains title and buttons */
+.header-item:nth-of-type(2) {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+#header-img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-button {
+    background-color: #1976D2;
+    padding: 14px 28px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.header-button:hover {
+    background-color: #0D47A1;
+}
+
+/*** Sections ***/
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+/*** About Section ***/
+.video-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/*** Schedule Section (Using Flexbox) ***/
+.schedule-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.schedule-item {
+    flex: 1;
+    min-width: 280px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.schedule-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.small-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/*** Links Section ***/
+#links {
+    background-color: #E3F2FD;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.block {
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid #42A5F5;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.block:hover {
+    background-color: #BBDEFB;
+    border-left-color: #1976D2;
+    transform: translateX(10px);
+}
+
+article h3 {
+    margin: 0 0 10px 0;
+    color: #1976D2;
+}
+
+article p {
+    margin: 0;
+    color: #555;
+}
+
+/*** Footer (Fixed Position - Stretch Feature) ***/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1976D2;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    color: #E3F2FD;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: white;
+    font-size: 14px;
+}
+
+/*** Iframe Styling ***/
+iframe {
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*** Responsive Design for Smaller Screens ***/
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .navbar ul li {
+        float: none;
+        width: 100%;
+    }
+    
+    .schedule-container {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/*** Dark Mode Styles ***/
+.dark-mode {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
+
+.dark-mode h1 {
+    background-color: #1565C0;
+    color: white;
+}
+
+.dark-mode h2 {
+    color: #64B5F6;
+    border-bottom-color: #1565C0;
+}
+
+.dark-mode h3,
+.dark-mode h4 {
+    color: #f0f0f0;
+}
+
+.dark-mode p,
+.dark-mode li {
+    color: #e0e0e0;
+}
+
+.dark-mode a:link {
+    color: #64B5F6;
+}
+
+.dark-mode a:visited {
+    color: #BA68C8;
+}
+
+.dark-mode .navbar ul {
+    background-color: #1565C0;
+}
+
+.dark-mode .header-container {
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+}
+
+.dark-mode .schedule-item {
+    background-color: #3c3c3c;
+}
+
+.dark-mode #links {
+    background-color: #1e3a5f;
+}
+
+.dark-mode .block {
+    background-color: #3c3c3c;
+}
+
+.dark-mode .block:hover {
+    background-color: #4a4a4a;
+}
+
+.dark-mode article h3 {
+    color: #64B5F6;
+}
+
+.dark-mode article p {
+    color: #e0e0e0;
+}
+
+.dark-mode .footer {
+    background-color: #0D47A1;
+}
+
+/*** Theme Button Styling ***/
+#theme-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid #667eea;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05);
+}
+
+/*** RSVP Section ***/
+#rsvp {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #E3F2FD;
+    border-radius: 10px;
+}
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.rsvp-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.rsvp-participants {
+    width: 45%;
+    padding-right: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-participants p {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+#rsvp-count {
+    font-weight: bold;
+    color: #1976D2;
+    background-color: #E3F2FD !important;
+    margin-top: 20px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#rsvp-form label {
+    font-weight: bold;
+    color: #1976D2;
+    margin-bottom: 5px;
+}
+
+#rsvp-form input {
+    padding: 12px;
+    border: 2px solid #BBDEFB;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#rsvp-form input:focus {
+    outline: none;
+    border-color: #1976D2;
+}
+
+#rsvp-button {
+    margin-top: 20px;
+    background-color: #1976D2;
+    padding: 14px 28px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#rsvp-button:hover {
+    background-color: #0D47A1;
+}
+
+.error {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #e63946 !important;
+    background-color: #f8bbd0 !important;
+}
+
+.dark-mode #rsvp {
+    background-color: #1e3a5f;
+}
+
+.dark-mode .rsvp-participants {
+    background-color: #3c3c3c;
+}
+
+.dark-mode .rsvp-participants p {
+    background-color: #4a4a4a;
+}
+
+.dark-mode .form-container {
+    background-color: #3c3c3c;
+}
+
+.dark-mode #rsvp-form input {
+    background-color: #4a4a4a;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode #rsvp-form label {
+    color: #64B5F6;
+}
+
+
+/*** PART 8: MODAL STYLES ***/
+
+/* Modal Overlay - darkens the rest of the screen */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+/* Modal Animation (appears with scale and fade) */
+.modal-content.modal-animate {
+    animation: modalFadeIn 0.5s ease forwards;
+}
+
+@keyframes modalFadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Modal Close Button (X) - Stretch Feature */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: #d62828;
+    transform: rotate(90deg);
+}
+
+/* Modal Image with Animation */
+.modal-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 4px solid #42A5F5;
+}
+
+/* Modal Image Animation (rotate and scale) */
+.modal-image.modal-image-animate {
+    animation: imageRotateScale 0.8s ease-in-out;
+}
+
+@keyframes imageRotateScale {
+    0% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Modal Title */
+.modal-title {
+    color: #1976D2;
+    font-size: 32px;
+    margin: 20px 0;
+    border: none;
+    text-align: center;
+}
+
+/* Modal Message (Personalized text) */
+.modal-message {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Dark Mode Modal Styles */
+.dark-mode .modal-content {
+    background-color: #3c3c3c;
+}
+
+.dark-mode .modal-title {
+    color: #64B5F6;
+}
+
+.dark-mode .modal-message {
+    color: #e0e0e0;
+}
+
+.dark-mode .modal-image {
+    border-color: #1565C0;
+}
+
+
+/*** SCROLL ANIMATION STYLES (Extra Part) ***/
+
+/* Initial state: sections hidden */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state: sections appear */
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*** REDUCE MOTION ACCESSIBILITY (Stretch Feature) ***/
+
+/* When reduce-motion is enabled, disable ALL animations */
+.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+}
+
+.reduce-motion .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.reduce-motion .modal-image {
+    transform: none;
+    opacity: 1;
+}
+
+.reduce-motion .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+/* Respect user's system preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/*** MOTION BUTTON STYLING ***/
+#motion-button {
+    background: linear-gradient(135deg, #7B1FA2 0%, #9C27B0 100%);
+    color: white;
+    border: 2px solid #7B1FA2;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#motion-button:hover {
+    background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+    transform: scale(1.05);
+}
+
+/*** SUCCESS MODAL (Part 8) ***/
+
+.modal-container {
+    padding: 50px;
+    width: 55%;
+    background-color: lightsteelblue;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-item {
+    flex: 1;
+    padding: 20px;
+}
+
+#modal-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Dark mode modal */
+.dark-mode .modal-container {
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+}
+
+/* Makes the emoji wave smoothly */
+#modal-img {
+    transition: transform 0.5s ease;
+    display: inline-block;
+}
+
+/* Makes sure the modal uses flex when shown (important!) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-container {
+    background: lightsteelblue;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+.dark-mode .modal-container { background: #333; color: white; }

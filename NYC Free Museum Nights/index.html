@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NYC Free Museum Nights</title>
+    <link rel="icon" href="./img/sitelogo.png">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- ALL YOUR ORIGINAL CONTENT (100% intact) -->
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><button id="theme-button">Toggle Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-container" role="banner">
+        <div class="header-item">
+            <img id="header-img" src="./img/sitelogo.png" alt="NYC Free Museum Nights Logo"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/250?text=Logo';">
+        </div>
+        <div class="header-item">
+            <h1>NYC Free Museum Nights</h1>
+            <h3>Free Museums. Real Culture. Only in NYC.</h3>
+            <button type="button" class="header-button" id="signupBtn">Sign Up</button>
+            <button type="button" class="header-button" id="loginBtn">Login</button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About the Event</h2>
+        <div class="video-container">
+            <iframe src="https://www.instagram.com/p/DN1u3Y42hTu/embed" width="400" height="480" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>
+            The NYC Museum Free Night Series is a recurring cultural event where museums across the city open their doors to the public at no cost. Guests can explore exhibits, attend live performances, and join interactive workshops in a lively, welcoming atmosphere.
+        </p>
+        <p>
+            The event is designed for students, tourists, families, and art lovers who want to experience New York's rich cultural scene without the barrier of admission fees. It's the perfect way to connect with art, history, and community in an accessible and exciting format.
+        </p>
+
+        <h3>Our guide to free museum nights, live performances, and more</h3>
+        <h4>What to Expect</h4>
+        <ul>
+            <li><b>Free Admission:</b> <i>No cost to enter participating museums</i></li>
+            <li><b>Special Events:</b> <i>Live performances, workshops, and artist talks</i></li>
+            <li><b>All Ages Welcome:</b> <i>Family-friendly programming throughout the evening</i></li>
+        </ul>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Featured Museums</h2>
+        <p>Explore these incredible institutions on free nights throughout the year.</p>
+
+        <div class="schedule-container">
+            <article class="schedule-item" aria-labelledby="met-title">
+                <img src="img/museumnyc1.jpg" class="small-image" alt="Metropolitan Museum of Art exterior" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200';">
+                <h3 id="met-title">Metropolitan Museum of Art</h3>
+                <p>World-renowned art collection spanning 5,000 years of culture</p>
+            </article>
+
+            <article class="schedule-item" aria-labelledby="amnh-title">
+                <img src="img/nycmuseum2.jpg" class="small-image" alt="Museum interior view" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200';">
+                <h3 id="amnh-title">American Museum of Natural History</h3>
+                <p>Discover dinosaurs, space exploration, and natural wonders</p>
+            </article>
+
+            <article class="schedule-item" aria-labelledby="moma-title">
+                <img src="img/moma2.jpg" class="small-image" alt="MOMA building" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=MoMA';">
+                <h3 id="moma-title">Museum of Modern Art (MoMA)</h3>
+                <p>Contemporary and modern masterpieces from around the world</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" aria-labelledby="rsvp-heading">
+        <h2 id="rsvp-heading">RSVP</h2>
+        <div class="rsvp-container">
+            <div class="rsvp-para">
+                <p>Don't miss out on NYC's best cultural nights! Sign up now to receive notifications about upcoming free museum events. Join fellow art lovers, students, and culture enthusiasts for unforgettable evenings exploring world-class exhibits at no cost.</p>
+            </div>
+            <aside class="rsvp-participants" aria-live="polite">
+                <p>🎟️ DJ from Texas has RSVP'd.</p>
+                <p>🎟️ Amy from New York has RSVP'd.</p>
+                <p>🎟️ Teresa from Montana has RSVP'd.</p>
+                <p id="rsvp-count">⭐ 3 people have RSVP'd to this event!</p>
+            </aside>
+        </div>
+
+        <div class="form-container">
+            <form id="rsvp-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="state">Home State:</label>
+                <input type="text" id="state" placeholder="Enter your state" required>
+
+                <button type="submit" id="rsvp-button">Submit RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" aria-labelledby="links-heading">
+        <h2 id="links-heading">Helpful Links</h2>
+
+        <a class="block" href="https://www.metmuseum.org" target="_blank" rel="noopener">
+            <article>
+                <h3>The Met Museum</h3>
+                <p>Check the calendar for free admission hours and special exhibitions</p>
+            </article>
+        </a>
+
+        <a class="block" href="https://www.moma.org/calendar/events/10253" target="_blank" rel="noopener">
+            <article>
+                <h3>MoMA - UNIQLO Friday Nights</h3>
+                <p>Free admission every Friday from 4:00 to 8:00 pm</p>
+            </article>
+        </a>
+
+        <a class="block" href="https://www.amnh.org" target="_blank" rel="noopener">
+            <article>
+                <h3>American Museum of Natural History</h3>
+                <p>Suggested admission - pay what you wish opportunities available</p>
+            </article>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>
+            <a href="https://www.nycgo.com/attractions/museums" target="_blank" rel="noopener">NYC Museums Guide</a> |
+            <a href="https://www.timeout.com/newyork/museums/free-museums-in-nyc" target="_blank" rel="noopener">Time Out NYC</a>
+        </p>
+        <p>&copy; 2025 NYC Free Museum Nights</p>
+    </footer>
+
+    <!-- SUCCESS MODAL -->
+    <div id="success-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
+        <div style="background:lightsteelblue;padding:50px;border-radius:20px;text-align:center;max-width:600px;width:90%;">
+            <p id="modal-text" style="font-size:28px;font-weight:bold;margin:0 0 20px 0;"></p>
+            <button id="close-modal" style="padding:15px 40px;background:#e63946;color:white;border:none;border-radius:10px;font-size:18px;cursor:pointer;">Close</button>
+            <div id="celebrate" style="font-size:200px;margin:30px 0;transition:transform 0.5s ease;">🎉</div>
+        </div>
+    </div>
+
+    <!-- WORKING JAVASCRIPT (wrapped in DOMContentLoaded so it waits for full page) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let count = 3;
+        let motion = true;
+        let deg = 0;
+        let timer = null;
+
+        // Dark Mode
+        document.getElementById('theme-button').onclick = () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        };
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+        // Reduce Motion Button
+        const ul = document.querySelector('.navbar ul');
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.textContent = 'Reduce Motion';
+        btn.style.cssText = 'background:#7B1FA2;color:white;border:none;padding:10px 20px;border-radius:8px;margin-left:10px;cursor:pointer;font-weight:bold;';
+        btn.onclick = () => { motion = !motion; btn.textContent = motion ? 'Reduce Motion' : 'Enable Motion'; };
+        li.appendChild(btn);
+        ul.appendChild(li);
+
+        // Wave animation
+        const wave = () => { deg = deg === 0 ? -20 : 0; document.getElementById('celebrate').style.transform = `rotate(${deg}deg)`; };
+
+        // Show modal
+        const showModal = (name, state) => {
+            document.getElementById('success-modal').style.display = 'flex';
+            document.getElementById('modal-text').textContent = `Thanks for RSVPing, ${name} from ${state}! We can't wait to see you! 🎉`;
+            if (motion) { clearInterval(timer); timer = setInterval(wave, 500); }
+            setTimeout(() => {
+                document.getElementById('success-modal').style.display = 'none';
+                clearInterval(timer);
+                document.getElementById('celebrate').style.transform = 'rotate(0deg)';
+            }, 7000);
+        };
+
+        // Close button
+        document.getElementById('close-modal').onclick = () => {
+            document.getElementById('success-modal').style.display = 'none';
+            clearInterval(timer);
+            document.getElementById('celebrate').style.transform = 'rotate(0deg)';
+        };
+
+        // RSVP Submit
+        document.getElementById('rsvp-button').onclick = e => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const state = document.getElementById('state').value.trim();
+
+            if (name.length >= 2 && email.includes('@') && state.length >= 2) {
+                const list = document.querySelector('.rsvp-participants');
+                const p = document.createElement('p');
+                p.textContent = `🎟️ ${name} from ${state} has RSVP'd.`;
+                list.insertBefore(p, document.getElementById('rsvp-count'));
+                count++;
+                document.getElementById('rsvp-count').textContent = `⭐ ${count} people have RSVP'd to this event!`;
+                showModal(name, state);
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('state').value = '';
+            }
+        };
+    });
+    </script>
+</body>
+</html>
